@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+/*
+Color Pallete:
+F6F1D1 - Off White
+CFD7C7 - Light Gray
+70A9A1 - Tealish
+40798C - Calm ocean blue
+0B2027 - Dark Gray
+*/
+
+body, html{
+    background-color: #F6F1D1;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    font-size: 3rem;
+    margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0B2027;
+    width: 100%;
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#live-background{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.site-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ee6c4d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-header{
+    text-align: center;
 }
