@@ -7,8 +7,16 @@ CFD7C7 - Light Gray
 0B2027 - Dark Gray
 */
 
+:root{
+    --off-white: #F6F1D1;
+    --light-gray: #CFD7C7;
+    --tealish: #70A9A1;
+    --ocean-blue: #40798C;
+    --dark-gray: #0B2027;
+}
+
 body, html{
-    background-color: #F6F1D1;
+    background-color: var(--off-white);
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -20,32 +28,74 @@ h1{
     margin: 0px;
 }
 
+h3{
+    font-size: 1.5rem;
+}
+
 #root{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #0B2027;
+    color: var(--dark-gray);
     width: 100%;
     height: 100%;
 }
 
-#live-background{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
+#bottom-svg{
+    height: 19vh;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .site-header{
+    background-color: var(--dark-gray);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ee6c4d;
+    height: 80vh;
 }
 
 .nav-header{
+    color: var(--off-white);
     text-align: center;
+    padding: 4em;
+    background-color: var(--tealish);
+    margin-bottom: 4em;
+    animation: header-box 0.5s linear 1 forwards;
+    transition: border-radius 2s;
+    box-shadow: 0.9em 0.9em 5px rgb(82, 139, 131);
+}
+
+.nav-header:hover{
+    border-radius: 3rem 0rem 3rem 0rem;
+}
+
+.explore-button{
+    text-align: center;
+    background-image: linear-gradient(var(--ocean-blue), var(--tealish));
+    border-radius: 1rem;
+    flex-basis: auto;
+    padding: 1rem;
+}
+
+.explore-button.pointer{
+    cursor: pointer;
+}
+
+.explore-button a{
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+@keyframes header-box{
+    0%{
+        border-radius: 3rem 0rem 3rem 0rem;
+    }
+    100%{
+        border-radius: 0.2rem 3rem 0.2rem 3rem;
+    }
 }
